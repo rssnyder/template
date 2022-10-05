@@ -1,4 +1,5 @@
 name: <+pipeline.variables.project>
 image: rileysnyderharnessio/<+pipeline.variables.project>
 tag: latest
-port: <+pipeline.variables.port>
+port: <+pipeline.stages.deploy.spec.serviceConfig.serviceDefinition.spec.variables.port>
+replicas: <+pipeline.stages.deploy.spec.serviceConfig.serviceDefinition.spec.variables.replicas>
