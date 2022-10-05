@@ -1,0 +1,4 @@
+name: <+pipeline.variables.project>
+image: rileysnyderharnessio/<+pipeline.variables.project>
+tag: latest
+port: <+pipeline.variables.port>
