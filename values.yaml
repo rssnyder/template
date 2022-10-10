@@ -1,4 +1,4 @@
-name: <+pipeline.variables.project>
+name: <+service.name>-<+stage.spec.infrastructure.environmentRef>
 app: <+service.name>
 image: <+artifact.image>
 port: <+stage.spec.serviceConfig.serviceDefinition.spec.variables.port>
