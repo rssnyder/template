@@ -1,5 +1,5 @@
 name: <+service.name>-<+env.environmentRef>
 app: <+service.name>
 image: <+artifact.image>
-port: 80
+port: <+serviceVariables.port>
 replicas: 1
