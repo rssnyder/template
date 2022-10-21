@@ -1,4 +1,4 @@
-name: <+service.name>-<+stage.spec.infrastructure.environmentRef>
+name: <+service.name>-<+env.environmentRef>
 app: <+service.name>
 image: <+artifact.image>
 port: <+stage.spec.serviceConfig.serviceDefinition.spec.variables.port>
