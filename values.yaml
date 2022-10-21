@@ -2,4 +2,4 @@ name: <+service.name>-<+env.environmentRef>
 app: <+service.name>
 image: <+artifact.image>
 port: <+serviceVariables.port>
-replicas: 1
+replicas: <+serviceVariables.replicas>
