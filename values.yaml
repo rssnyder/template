@@ -1,7 +1,5 @@
 name: <+service.name>-<+env.environmentRef>
 app: <+service.name>
 image: <+artifact.image>
-# port: <+stage.spec.serviceConfig.serviceDefinition.spec.variables.port>
-# replicas: <+stage.spec.serviceConfig.serviceDefinition.spec.variables.replicas>
 port: 80
 replicas: 1
