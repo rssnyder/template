@@ -1,0 +1,32 @@
+{
+  "cluster": "riley-lab",
+  "serviceName": "delegate",
+  "taskDefinition": "harness-delegate-ng",
+  "desiredCount": 1,
+  "launchType": "FARGATE",
+  "platformVersion": "LATEST",
+  "platformFamily": "Linux",
+  "role": "arn:aws:iam::759984737373:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+  "deploymentConfiguration": {
+    "maximumPercent": 100,
+    "minimumHealthyPercent": 200
+  },
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "subnets": [
+        "subnet-0974d4940eab1ea9d",
+        "subnet-0eaff6f3ea07045d4"
+      ],
+      "securityGroups": [
+        "sg-0472e18c1a90179d9"
+      ],
+      "assignPublicIp": "DISABLED"
+    }
+  },
+  "schedulingStrategy": "REPLICA",
+  "deploymentController": {
+    "type": "ECS"
+  },
+  "enableECSManagedTags": true,
+  "propagateTags": "NONE"
+}

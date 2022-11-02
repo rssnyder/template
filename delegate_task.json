@@ -1,0 +1,189 @@
+{
+  "ipcMode": null,
+  "executionRoleArn": "arn:aws:iam::759984737373:role/riley-ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "dnsSearchDomains": null,
+      "environmentFiles": null,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "secretOptions": null,
+        "options": {
+          "awslogs-group": "riley-lab-ecs",
+          "awslogs-region": "us-west-2",
+          "awslogs-stream-prefix": "delegate"
+        }
+      },
+      "entryPoint": null,
+      "portMappings": [],
+      "command": null,
+      "linuxParameters": null,
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "ACCOUNT_ID",
+          "value": "wlgELJ0TTre5aZhzpt8gVA"
+        },
+        {
+          "name": "CDN_URL",
+          "value": "https://app.harness.io"
+        },
+        {
+          "name": "DELEGATE_CHECK_LOCATION",
+          "value": "delegatefree.txt"
+        },
+        {
+          "name": "DELEGATE_DESCRIPTION",
+          "value": ""
+        },
+        {
+          "name": "DELEGATE_NAME",
+          "value": "ecs"
+        },
+        {
+          "name": "DELEGATE_STORAGE_URL",
+          "value": "https://app.harness.io"
+        },
+        {
+          "name": "DELEGATE_TAGS",
+          "value": ""
+        },
+        {
+          "name": "DELEGATE_TYPE",
+          "value": "DOCKER"
+        },
+        {
+          "name": "DEPLOY_MODE",
+          "value": "KUBERNETES"
+        },
+        {
+          "name": "INIT_SCRIPT",
+          "value": "curl ifconfig.co"
+        },
+        {
+          "name": "MANAGER_HOST_AND_PORT",
+          "value": "https://app.harness.io/gratis"
+        },
+        {
+          "name": "NEXT_GEN",
+          "value": "true"
+        },
+        {
+          "name": "PROXY_MANAGER",
+          "value": "true"
+        },
+        {
+          "name": "REMOTE_WATCHER_URL_CDN",
+          "value": "https://app.harness.io/public/shared/watchers/builds"
+        },
+        {
+          "name": "WATCHER_CHECK_LOCATION",
+          "value": "current.version"
+        },
+        {
+          "name": "WATCHER_STORAGE_URL",
+          "value": "https://app.harness.io/public/free/freemium/watchers"
+        }
+      ],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": null,
+      "mountPoints": [],
+      "workingDirectory": null,
+      "secrets": [
+        {
+          "valueFrom": "arn:aws:secretsmanager:us-west-2:759984737373:secret:riley/delegate-zBsttc:::",
+          "name": "DELEGATE_TOKEN"
+        }
+      ],
+      "dockerSecurityOptions": null,
+      "memory": null,
+      "memoryReservation": null,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "harness/delegate:latest",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": null,
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": null,
+      "name": "delegate"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "2048",
+  "taskRoleArn": "arn:aws:iam::759984737373:role/riley-ecsTaskRole",
+  "compatibilities": [
+    "EC2",
+    "FARGATE"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:us-west-2:759984737373:task-definition/harness-delegate-ng:13",
+  "family": "harness-delegate-ng",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.secrets.asm.environment-variables"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.task-eni"
+    }
+  ],
+  "pidMode": null,
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "runtimePlatform": null,
+  "cpu": "1024",
+  "revision": 13,
+  "status": "ACTIVE",
+  "inferenceAccelerators": null,
+  "proxyConfiguration": null,
+  "volumes": []
+}
