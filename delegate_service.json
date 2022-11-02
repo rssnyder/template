@@ -8,8 +8,8 @@
   "platformFamily": "Linux",
   "role": "arn:aws:iam::759984737373:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
   "deploymentConfiguration": {
-    "maximumPercent": 100,
-    "minimumHealthyPercent": 200
+    "maximumPercent": 200,
+    "minimumHealthyPercent": 100
   },
   "networkConfiguration": {
     "awsvpcConfiguration": {
