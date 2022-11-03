@@ -3,4 +3,3 @@ app: <+service.name>
 image: <+artifact.image>
 port: <+serviceVariables.port>
 replicas: <+serviceVariables.replicas>
-namespace: <+serviceVariables.namespace>
