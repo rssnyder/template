@@ -1,4 +1,4 @@
 image: <+artifact.image>
-accountId: <+secrets.getValue("accountId")>
+accountId: <+account.identifier>
 delegateToken: <+secrets.getValue("delegateToken")>
 upgradeToken: <+secrets.getValue("upgradeToken")>
