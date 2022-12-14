@@ -15,6 +15,6 @@ template:
       source:
         type: Inline
         spec:
-          script: echo hello
+          script: echo goodbye
       environmentVariables: []
       outputVariables: []
