@@ -1,0 +1,27 @@
+template:
+  name: test
+  identifier: test
+  versionLabel: "1"
+  type: Stage
+  projectIdentifier: development
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: CI
+    spec:
+      cloneCodebase: true
+      platform:
+        os: Linux
+        arch: Amd64
+      runtime:
+        type: Cloud
+        spec: {}
+      execution:
+        steps:
+          - step:
+              type: Run
+              name: Run
+              identifier: Run
+              spec:
+                shell: Sh
+                command: echo
