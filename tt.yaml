@@ -1,1 +1,1 @@
-tt: <+serviceVariables.tt>
+tt: "<+serviceVariables.tt>"
