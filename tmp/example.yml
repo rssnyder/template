@@ -6,66 +6,55 @@ pipeline:
   tags: {}
   stages:
     - stage:
-        name: apply
-        identifier: apply
+        name: one
+        identifier: one
         description: ""
         type: Custom
         spec:
           execution:
             steps:
               - step:
-                  type: TerraformPlan
-                  name: plan
-                  identifier: pla
+                  type: ShellScript
+                  name: one
+                  identifier: one
                   spec:
-                    configuration:
-                      command: Apply
-                      configFiles:
-                        store:
-                          type: Github
-                          spec:
-                            gitFetchType: Branch
-                            connectorRef: account.rssnyder
-                            repoName: test
-                            branch: main
-                            folderPath: terraform/
-                        moduleSource:
-                          useConnectorCredentials: true
-                      secretManagerRef: harnessSecretManager
-                      environmentVariables:
-                        - name: TF_VAR_aws_region
-                          value: replaceme
-                          type: String
-                        - name: TF_VAR_role_arn
-                          value: replaceme
-                          type: String
-                    provisionerIdentifier: harnessascode
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "<+pipeline.stages.one.variables.one>"
+                    environmentVariables: []
+                    outputVariables: []
                   timeout: 10m
-                  failureStrategies: []
+        tags: {}
+        variables:
+          - name: one
+            type: String
+            description: ""
+            value: <+pipeline.startTs>
+    - stage:
+        name: two
+        identifier: two
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
               - step:
-                  type: HarnessApproval
-                  name: approve
-                  identifier: approve
+                  type: ShellScript
+                  name: two
+                  identifier: two
                   spec:
-                    approvalMessage: Please review the plan step output and approve based on the changes specified.
-                    includePipelineExecutionHistory: true
-                    approvers:
-                      userGroups:
-                        - _project_all_users
-                      minimumCount: 1
-                      disallowPipelineExecutor: false
-                    approverInputs: []
-                  timeout: 1d
-              - step:
-                  type: TerraformApply
-                  name: apply
-                  identifier: apply
-                  spec:
-                    configuration:
-                      type: InheritFromPlan
-                    provisionerIdentifier: harnessascode
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "<+pipeline.stages.one.variables.one>"
+                    environmentVariables: []
+                    outputVariables: []
                   timeout: 10m
-                  failureStrategies: []
         tags: {}
   delegateSelectors:
     - account.sa
