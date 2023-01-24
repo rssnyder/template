@@ -58,7 +58,7 @@
     "EC2",
     "FARGATE"
   ],
-  
+  "networkMode": "awsvpc",
   "cpu": "<+serviceVariables.cpu>",
   "family": "harness-delegate-task-spec"
 }
