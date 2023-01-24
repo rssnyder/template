@@ -10,7 +10,7 @@
         },
         {
           "name": "DELEGATE_TOKEN",
-          "value": "<+account.identifier>"
+          "value": "<+secrets.getValue("ecstest")>"
         },
         {
           "name": "DELEGATE_TYPE",
