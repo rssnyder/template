@@ -55,7 +55,8 @@
   ],
   "memory": "<+serviceVariables.memory>",
   "requiresCompatibilities": [
-    "EC2"
+    "EC2",
+    "FARGATE
   ],
   
   "cpu": "<+serviceVariables.cpu>",
