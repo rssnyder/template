@@ -6,7 +6,6 @@
   "launchType": "FARGATE",
   "platformVersion": "LATEST",
   "platformFamily": "Linux",
-  "role": "<+serviceVariables.role>",
   "deploymentConfiguration": {
     "maximumPercent": 200,
     "minimumHealthyPercent": 100
