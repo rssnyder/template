@@ -49,7 +49,6 @@
       "memory": "<+serviceVariables.memory>",
       "image": "<+artifact.image>",
       "essential": true,
-      "hostname": "<+serviceVariables.delegate_name>",
       "name": "<+serviceVariables.delegate_name>"
     }
   ],
