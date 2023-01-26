@@ -1,9 +1,12 @@
-variable "vvv" {
+variable "content" {
   type = string
 }
 
-resource "null_resource" "this" {
-  provisioner "local-exec" {
-    command = "echo ${var.vvv}"
-  }
+variable "name" {
+  type = string
+}
+
+resource "local_file" "foo" {
+  content  = var.content
+  filename = var.name
 }
