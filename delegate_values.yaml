@@ -1,4 +1,6 @@
-image: <+artifact.image>
+delegateName: helm-delegate
 accountId: <+account.identifier>
 delegateToken: <+secrets.getValue("delegate_token")>
-upgradeToken: <+secrets.getValue("delegate_token")>
+managerEndpoint: https://app.harness.io/gratis
+delegateDockerImage: <+artifact.image>
+replicas: 1
