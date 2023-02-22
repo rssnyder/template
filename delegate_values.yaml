@@ -1,4 +1,4 @@
-delegateName: helm-delegate
+delegateName: test
 accountId: <+account.identifier>
 delegateToken: <+secrets.getValue("delegate_token")>
 managerEndpoint: https://app.harness.io/gratis
