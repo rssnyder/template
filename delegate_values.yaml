@@ -1,4 +1,4 @@
-delegateName: test
+delegateName: <+serviceVariables.delegate_name>
 accountId: <+account.identifier>
 delegateToken: <+secrets.getValue("delegate_token")>
 managerEndpoint: https://app.harness.io/gratis
