@@ -1,5 +1,5 @@
-name: <+service.name>-<+env.environmentRef>
-app: <+service.name>
+name: <+service.name.toLowerCase()>-<+env.environmentRef>
+app: <+service.name.toLowerCase()>
 image: <+artifact.image>
 port: <+serviceVariables.port>
 replicas: <+serviceVariables.replicas>
